@@ -2,7 +2,7 @@
 
 # About
 
-`medusa-payment-flutterwave` is a [Medusa](https://medusajs.com) plugin that adds [Flutterwave](https://flutterwave.com) as a payment provider to Medusa ecommerce stores.
+`medusa-payment-flutterwave-pro` is a [Medusa](https://medusajs.com) plugin that adds [Flutterwave](https://flutterwave.com) as a payment provider to Medusa ecommerce stores.
 
 ![GIF Demoing Paying with Flutterwave](https://user-images.githubusercontent.com/87580113/197406110-ff68bd20-60a1-4842-85c1-1a6ef46dd498.gif)
 
