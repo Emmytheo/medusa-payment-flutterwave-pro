@@ -1,0 +1,1 @@
+export { FlutterwavePaymentProcessorConfig as PluginOptions } from "./services/flutterwave-payment-processor";

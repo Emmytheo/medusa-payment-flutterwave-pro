@@ -1,0 +1,56 @@
+{
+  "name": "medusa-payment-flutterwave-pro",
+  "version": "1.0.0",
+  "description": "Flutterwave Payment provider for Medusa Commerce",
+  "main": "dist/index.js",
+  "repository": "https://github.com/emmytheo/medusa-payment-flutterwave-pro",
+  "author": "Emmanuel Mgbaramuko <chidi.mgbara@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "@medusajs/medusa": "^1.20.3"
+  },
+  "dependencies": {
+    "@medusajs/utils": "^1.11.8",
+    "axios": "^1.6.8",
+    "axios-retry": "^4.0.0"
+  },
+  "devDependencies": {
+    "@medusajs/medusa": "^1.20.3",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^16.18.39",
+    "cross-env": "^5.2.1",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^27.1.2",
+    "jest": "^29.7.0",
+    "msw": "^2.2.7",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.1",
+    "typeorm": "^0.3.19",
+    "typescript": "^5.4.4"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "prepare": "pnpm run build",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "test:watch": "jest --watch",
+    "test": "jest --ci --coverage",
+    "lint": "eslint --ignore-path .gitignore . && prettier --check .",
+    "lint:fix": "eslint --ignore-path .gitignore . --fix && prettier --write ."
+  },
+  "keywords": [
+    "medusa",
+    "medusa-plugin",
+    "medusa-plugin-payment",
+    "medusa-payment-flutterwave-pro",
+    "medusa-flutterwave",
+    "flutterwave"
+  ]
+}

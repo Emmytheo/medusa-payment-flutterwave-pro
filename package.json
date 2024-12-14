@@ -1,0 +1,19 @@
+{
+  "name": "@medusa-payment-flutterwave-pro/monorepo",
+  "description": "Monorepo for medusa-payment-flutterwave-pro package and starters",
+  "license": "MIT",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "test:watch": "turbo test",
+    "release": "cp README.md packages/plugin && pnpm run build --filter='./packages/*' && pnpm changeset publish",
+    "check-deps": "manypkg check"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@manypkg/cli": "^0.21.0",
+    "turbo": "^1.10.12"
+  }
+}
