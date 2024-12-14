@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Flutterwave Payment provider for Medusa Commerce",
   "main": "dist/index.js",
-  "repository": "https://github.com/emmytheo/medusa-payment-flutterwave-pro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmytheo/medusa-payment-flutterwave-pro.git"
+  },
   "author": "Emmanuel Mgbaramuko <chidi.mgbara@gmail.com>",
   "license": "MIT",
   "files": [
@@ -52,5 +55,12 @@
     "medusa-payment-flutterwave-pro",
     "medusa-flutterwave",
     "flutterwave"
-  ]
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "bugs": {
+    "url": "https://github.com/emmytheo/medusa-payment-flutterwave-pro/issues"
+  },
+  "homepage": "https://github.com/emmytheo/medusa-payment-flutterwave-pro#readme"
 }
