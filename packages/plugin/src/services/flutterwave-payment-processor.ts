@@ -1,4 +1,6 @@
-import Flutterwave, { FlutterwaveTransactionAuthorisation } from "../lib/flutterwave";
+import Flutterwave, {
+  FlutterwaveTransactionAuthorisation,
+} from "../lib/flutterwave";
 
 import {
   AbstractPaymentProcessor,
@@ -110,7 +112,7 @@ class FlutterwavePaymentProcessor extends AbstractPaymentProcessor {
     return {
       session_data: {
         flutterwaveTxRef: data.tx_ref,
-        flutterwaveTxAuthData: data,
+        flutterwaveTxAuthData: { tx_ref: data.tx_ref, flw_ref: "", link: "" },
         cartId: context.resource_id,
       },
     };
@@ -152,10 +154,7 @@ class FlutterwavePaymentProcessor extends AbstractPaymentProcessor {
       })
   > {
     if (this.debug) {
-      console.info(
-        "FW_Debug: UpdatePayment",
-        JSON.stringify(context, null, 2),
-      );
+      console.info("FW_Debug: UpdatePayment", JSON.stringify(context, null, 2));
     }
 
     return this.initiatePayment(context);
@@ -311,7 +310,7 @@ class FlutterwavePaymentProcessor extends AbstractPaymentProcessor {
       const { flutterwaveTxId } = paymentSessionData;
 
       const { data, status, message } = await this.flutterwave.refund.create({
-        id: flutterwaveTxId,
+        transaction_id: flutterwaveTxId,
         amount: refundAmount,
       });
 
