@@ -1,6 +1,6 @@
 {
   "name": "medusa-payment-flutterwave-pro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flutterwave Payment provider for Medusa Commerce",
   "main": "dist/index.js",
   "repository": {
